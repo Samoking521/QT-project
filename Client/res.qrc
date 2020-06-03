@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icon/断开连接.png</file>
+        <file>icon/连接.png</file>
+        <file>icon/清空.png</file>
+        <file>icon/退出.png</file>
+    </qresource>
+</RCC>
