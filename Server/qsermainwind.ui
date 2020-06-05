@@ -97,10 +97,10 @@
        <item>
         <widget class="QSpinBox" name="PortspinBox">
          <property name="maximum">
-          <number>10000</number>
+          <number>100000</number>
          </property>
          <property name="singleStep">
-          <number>10</number>
+          <number>1000</number>
          </property>
          <property name="value">
           <number>1200</number>
@@ -133,7 +133,7 @@
           <number>5</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>5</number>
          </property>
          <item>
           <widget class="QPlainTextEdit" name="MessageBrowser">
@@ -267,7 +267,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QListView" name="MemberView">
+          <widget class="QListWidget" name="MemberView">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -288,8 +288,6 @@
      </item>
     </layout>
    </widget>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="toolBar">
@@ -340,7 +338,7 @@
   <action name="actCloseWindow">
    <property name="icon">
     <iconset>
-     <normalon>:/images/icon/退出.png</normalon>
+     <normalon>icon/退出.png</normalon>
     </iconset>
    </property>
    <property name="text">
@@ -353,7 +351,7 @@
   <action name="actClear">
    <property name="icon">
     <iconset>
-     <normalon>:/images/icon/清空.png</normalon>
+     <normalon>icon/清空.png</normalon>
     </iconset>
    </property>
    <property name="text">

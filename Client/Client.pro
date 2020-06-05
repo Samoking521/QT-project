@@ -26,13 +26,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        qclimainwind.cpp
+        qclimainwind.cpp \
+    qdiglogin.cpp
 
 HEADERS += \
-        qclimainwind.h
+        qclimainwind.h \
+    qdiglogin.h
 
 FORMS += \
-        qclimainwind.ui
+        qclimainwind.ui \
+    qdiglogin.ui
 
 RESOURCES += \
     res.qrc

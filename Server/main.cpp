@@ -2,8 +2,6 @@
 #include <QApplication>
 
 #include <QtCore/QSettings>
-#include <QtNetwork/QNetworkConfigurationManager>
-#include <QtNetwork/QNetworkSession>
 
 int main(int argc, char *argv[])
 {

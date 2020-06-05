@@ -18,7 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
@@ -60,7 +60,13 @@ public:
     QLineEdit *MessageEdit;
     QVBoxLayout *verticalLayout;
     QPlainTextEdit *StateText;
-    QListView *MemberView;
+    QHBoxLayout *horizontalLayout_4;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *MemberLabel;
+    QSpacerItem *horizontalSpacer_5;
+    QPushButton *AddMemberButton;
+    QPushButton *DelMemberButton;
+    QListWidget *MemberView;
     QStatusBar *statusBar;
     QToolBar *toolBar;
 
@@ -93,7 +99,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 781, 518));
+        layoutWidget->setGeometry(QRect(10, 10, 781, 511));
         verticalLayout_3 = new QVBoxLayout(layoutWidget);
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -153,10 +159,11 @@ public:
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setSizeConstraint(QLayout::SetDefaultConstraint);
+        horizontalLayout_2->setContentsMargins(5, 5, 5, 5);
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(-1, 5, -1, 3);
+        verticalLayout_2->setContentsMargins(-1, 0, -1, 0);
         MessageBrowser = new QPlainTextEdit(layoutWidget);
         MessageBrowser->setObjectName(QStringLiteral("MessageBrowser"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -212,18 +219,66 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(-1, 5, -1, 5);
+        verticalLayout->setContentsMargins(-1, 1, -1, 1);
         StateText = new QPlainTextEdit(layoutWidget);
         StateText->setObjectName(QStringLiteral("StateText"));
         StateText->setMinimumSize(QSize(250, 0));
-        StateText->setMaximumSize(QSize(16777215, 16777215));
+        StateText->setMaximumSize(QSize(16777215, 200));
 
         verticalLayout->addWidget(StateText);
 
-        MemberView = new QListView(layoutWidget);
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        MemberLabel = new QLabel(layoutWidget);
+        MemberLabel->setObjectName(QStringLiteral("MemberLabel"));
+        MemberLabel->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_5->addWidget(MemberLabel);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_5);
+
+        AddMemberButton = new QPushButton(layoutWidget);
+        AddMemberButton->setObjectName(QStringLiteral("AddMemberButton"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("icon/\346\267\273\345\212\240.png"), QSize(), QIcon::Normal, QIcon::Off);
+        AddMemberButton->setIcon(icon4);
+
+        horizontalLayout_5->addWidget(AddMemberButton);
+
+        DelMemberButton = new QPushButton(layoutWidget);
+        DelMemberButton->setObjectName(QStringLiteral("DelMemberButton"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8("icon/\345\210\240\351\231\244.png"), QSize(), QIcon::Normal, QIcon::Off);
+        DelMemberButton->setIcon(icon5);
+        DelMemberButton->setIconSize(QSize(20, 20));
+
+        horizontalLayout_5->addWidget(DelMemberButton);
+
+
+        verticalLayout->addLayout(horizontalLayout_5);
+
+        MemberView = new QListWidget(layoutWidget);
+        QBrush brush(QColor(0, 170, 255, 255));
+        brush.setStyle(Qt::NoBrush);
+        QBrush brush1(QColor(0, 0, 0, 255));
+        brush1.setStyle(Qt::NoBrush);
+        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(MemberView);
+        __qlistwidgetitem->setBackground(brush1);
+        __qlistwidgetitem->setForeground(brush);
+        __qlistwidgetitem->setFlags(Qt::ItemIsSelectable|Qt::ItemIsEnabled);
         MemberView->setObjectName(QStringLiteral("MemberView"));
         MemberView->setMinimumSize(QSize(0, 250));
-        MemberView->setMaximumSize(QSize(16777215, 16777215));
+        MemberView->setMaximumSize(QSize(16777215, 250));
+        MemberView->setSortingEnabled(false);
 
         verticalLayout->addWidget(MemberView);
 
@@ -271,6 +326,9 @@ public:
 #ifndef QT_NO_TOOLTIP
         actCloseWindow->setToolTip(QApplication::translate("QCliMainWind", "\351\200\200\345\207\272", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
+#ifndef QT_NO_SHORTCUT
+        actCloseWindow->setShortcut(QApplication::translate("QCliMainWind", "Esc", Q_NULLPTR));
+#endif // QT_NO_SHORTCUT
         actClear->setText(QApplication::translate("QCliMainWind", "\346\270\205\347\251\272\346\226\207\346\234\254\346\241\206", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         actClear->setToolTip(QApplication::translate("QCliMainWind", "\346\270\205\347\251\272\346\226\207\346\234\254\346\241\206", Q_NULLPTR));
@@ -283,6 +341,16 @@ public:
 #ifndef QT_NO_SHORTCUT
         SendMessageButton->setShortcut(QApplication::translate("QCliMainWind", "Return", Q_NULLPTR));
 #endif // QT_NO_SHORTCUT
+        MemberLabel->setText(QApplication::translate("QCliMainWind", "MembersList", Q_NULLPTR));
+        AddMemberButton->setText(QString());
+        DelMemberButton->setText(QString());
+
+        const bool __sortingEnabled = MemberView->isSortingEnabled();
+        MemberView->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = MemberView->item(0);
+        ___qlistwidgetitem->setText(QApplication::translate("QCliMainWind", "admin", Q_NULLPTR));
+        MemberView->setSortingEnabled(__sortingEnabled);
+
         toolBar->setWindowTitle(QApplication::translate("QCliMainWind", "toolBar", Q_NULLPTR));
     } // retranslateUi
 

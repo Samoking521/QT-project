@@ -220,6 +220,8 @@ release/moc_qsermainwind.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QMa
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/QList \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QMap \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QtNetwork \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QtNetworkDepends \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QtCore \
@@ -392,6 +394,7 @@ release/moc_qsermainwind.cpp: C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QMa
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qsslkey.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qudpsocket.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qtnetworkversion.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDebug \
 		qsermainwind.h \
 		release/moc_predefs.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/bin/moc.exe
@@ -525,6 +528,8 @@ release/main.o: main.cpp qsermainwind.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/QList \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QMap \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QtNetwork \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QtNetworkDepends \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QtCore \
@@ -697,14 +702,13 @@ release/main.o: main.cpp qsermainwind.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qsslkey.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qudpsocket.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qtnetworkversion.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDebug \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QApplication \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qapplication.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qguiapplication.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QSettings \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QNetworkConfigurationManager \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QNetworkSession
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QSettings
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/qsermainwind.o: qsermainwind.cpp qsermainwind.h \
@@ -814,6 +818,8 @@ release/qsermainwind.o: qsermainwind.cpp qsermainwind.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QLabel \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlabel.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/QList \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QMap \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QtNetwork \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/QtNetworkDepends \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QtCore \
@@ -986,6 +992,7 @@ release/qsermainwind.o: qsermainwind.cpp qsermainwind.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qsslkey.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qudpsocket.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtNetwork/qtnetworkversion.h \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtCore/QDebug \
 		ui_qsermainwind.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QAction \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qaction.h \
@@ -1023,7 +1030,8 @@ release/qsermainwind.o: qsermainwind.cpp qsermainwind.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qtextformat.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qpen.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QListView \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QListWidget \
+		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlistwidget.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qlistview.h \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/QPlainTextEdit \
 		C:/Qt/Qt5.9.0/5.9/mingw53_32/include/QtWidgets/qplaintextedit.h \

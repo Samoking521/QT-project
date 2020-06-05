@@ -20,7 +20,7 @@
       <x>10</x>
       <y>10</y>
       <width>781</width>
-      <height>518</height>
+      <height>511</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -127,13 +127,25 @@
        <property name="sizeConstraint">
         <enum>QLayout::SetDefaultConstraint</enum>
        </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <property name="topMargin">
-          <number>5</number>
+          <number>0</number>
          </property>
          <property name="bottomMargin">
-          <number>3</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QPlainTextEdit" name="MessageBrowser">
@@ -245,10 +257,10 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="topMargin">
-          <number>5</number>
+          <number>1</number>
          </property>
          <property name="bottomMargin">
-          <number>5</number>
+          <number>1</number>
          </property>
          <item>
           <widget class="QPlainTextEdit" name="StateText">
@@ -261,13 +273,71 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>16777215</height>
+             <height>200</height>
             </size>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QListView" name="MemberView">
+          <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="MemberLabel">
+             <property name="text">
+              <string>MembersList</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="AddMemberButton">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/添加.png</normaloff>icon/添加.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DelMemberButton">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>icon/删除.png</normaloff>icon/删除.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QListWidget" name="MemberView">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -277,9 +347,38 @@
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>16777215</height>
+             <height>250</height>
             </size>
            </property>
+           <property name="sortingEnabled">
+            <bool>false</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>admin</string>
+            </property>
+            <property name="background">
+             <brush brushstyle="NoBrush">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </property>
+            <property name="foreground">
+             <brush brushstyle="NoBrush">
+              <color alpha="255">
+               <red>0</red>
+               <green>170</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </property>
+            <property name="flags">
+             <set>ItemIsSelectable|ItemIsEnabled</set>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>
@@ -346,6 +445,9 @@
    </property>
    <property name="toolTip">
     <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
    </property>
   </action>
   <action name="actClear">

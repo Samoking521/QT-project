@@ -18,7 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
@@ -60,7 +60,7 @@ public:
     QLineEdit *MessageEdit;
     QVBoxLayout *verticalLayout;
     QPlainTextEdit *StateText;
-    QListView *MemberView;
+    QListWidget *MemberView;
     QStatusBar *statusBar;
     QToolBar *toolBar;
 
@@ -82,12 +82,12 @@ public:
         actCloseWindow = new QAction(QSerMainWind);
         actCloseWindow->setObjectName(QStringLiteral("actCloseWindow"));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/images/icon/\351\200\200\345\207\272.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon2.addFile(QString::fromUtf8("icon/\351\200\200\345\207\272.png"), QSize(), QIcon::Normal, QIcon::On);
         actCloseWindow->setIcon(icon2);
         actClear = new QAction(QSerMainWind);
         actClear->setObjectName(QStringLiteral("actClear"));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/images/icon/\346\270\205\347\251\272.png"), QSize(), QIcon::Normal, QIcon::On);
+        icon3.addFile(QString::fromUtf8("icon/\346\270\205\347\251\272.png"), QSize(), QIcon::Normal, QIcon::On);
         actClear->setIcon(icon3);
         centralWidget = new QWidget(QSerMainWind);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
@@ -136,8 +136,8 @@ public:
 
         PortspinBox = new QSpinBox(layoutWidget);
         PortspinBox->setObjectName(QStringLiteral("PortspinBox"));
-        PortspinBox->setMaximum(10000);
-        PortspinBox->setSingleStep(10);
+        PortspinBox->setMaximum(100000);
+        PortspinBox->setSingleStep(1000);
         PortspinBox->setValue(1200);
 
         horizontalLayout_3->addWidget(PortspinBox);
@@ -156,7 +156,7 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(-1, 5, -1, 3);
+        verticalLayout_2->setContentsMargins(-1, 5, -1, 5);
         MessageBrowser = new QPlainTextEdit(layoutWidget);
         MessageBrowser->setObjectName(QStringLiteral("MessageBrowser"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
@@ -220,7 +220,7 @@ public:
 
         verticalLayout->addWidget(StateText);
 
-        MemberView = new QListView(layoutWidget);
+        MemberView = new QListWidget(layoutWidget);
         MemberView->setObjectName(QStringLiteral("MemberView"));
         MemberView->setMinimumSize(QSize(0, 250));
         MemberView->setMaximumSize(QSize(16777215, 16777215));
@@ -234,8 +234,6 @@ public:
         verticalLayout_3->addLayout(horizontalLayout_2);
 
         QSerMainWind->setCentralWidget(centralWidget);
-        layoutWidget->raise();
-        layoutWidget->raise();
         statusBar = new QStatusBar(QSerMainWind);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         QSerMainWind->setStatusBar(statusBar);
